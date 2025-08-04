@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>треки для мм сашо</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎶Выбрать трек</h1>
+  <div class="tabs">
+    <div class="tab" onclick="showTab(0)">for you-enlighten</div>
+    <div class="tab" onclick="showTab(1)">Трек 2(none)</div>
+    <div class="tab" onclick="showTab(2)">Трек 3(none)</div>
+  </div>
+
+  <div class="content" id="tabContent">
+    <div class="tab-pane">
+      <h2>for you</h2>
+      <audio controls>
+        <source src="music/track1.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <a class="download-btn" href="music/track1.mp3" download>⬇️ Скачать</a>
+    </div>
+
+    <div class="tab-pane" style="display:none;">
+      <h2>Трек 2(none)</h2>
+      <audio controls>
+        <source src="music/track2.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <a class="download-btn" href="music/track2.mp3" download>⬇️ Скачать</a>
+    </div>
+
+    <div class="tab-pane" style="display:none;">
+      <h2>Трек 3(none)</h2>
+      <audio controls>
+        <source src="music/track3.mp3" type="audio/mpeg">
+      </audio>
+      <br>
+      <a class="download-btn" href="music/track3.mp3" download>⬇️ Скачать</a>
+    </div>
+  </div>
+
+  <script>
+    function showTab(index) {
+      const panes = document.querySelectorAll('.tab-pane');
+      panes.forEach((pane, i) => {
+        pane.style.display = (i === index) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
